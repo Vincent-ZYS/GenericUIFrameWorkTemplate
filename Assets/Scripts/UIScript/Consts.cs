@@ -5,8 +5,8 @@ using UnityEngine;
 public enum UIPanelType
 {
     None,
-    SettingPanel,
-    GamePausePanel,
-    GameMenuePanel,
-    GameOverPanel
+    Setting_Panel,
+    Pause_Panel,
+    GameMenue_Panel,
+    GameOver_Panel
 }

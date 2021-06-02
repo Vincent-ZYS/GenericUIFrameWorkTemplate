@@ -1,0 +1,12 @@
+{
+  "infoList":[
+	{
+		"panelTypeString": "Setting_Panel",
+		"path": "UIPanelPrefab/Setting_Panel"
+	},
+	{
+		"panelTypeString": "Pause_Panel",
+		"path": "UIPanelPrefab/Pause_Panel"
+	}
+  ]
+}
