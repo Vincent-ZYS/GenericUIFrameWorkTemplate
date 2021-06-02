@@ -57,7 +57,6 @@ public class UIManager : Singleton<UIManager>
     /// </summary>
     public UIManager()
     {
-        Debug.Log("HIIII");
         ParseUIPanelTypeJsonFile();
     }
 

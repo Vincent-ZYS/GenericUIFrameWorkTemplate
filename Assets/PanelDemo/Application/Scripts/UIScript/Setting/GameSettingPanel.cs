@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using MoreMountains.TopDownEngine;
+using DG.Tweening;
 
 
 //manage the panel btns' event and initial
@@ -30,28 +31,28 @@ public class GameSettingPanel : BasePanel
 
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1;
-        //transform.DOScale(Vector3.one, 0.25f).SetUpdate(true);
+        transform.DOScale(Vector3.one, 0.25f).SetUpdate(true);
     }
 
     public override void OnExit()
     {
         base.OnExit();
+        transform.DOScale(Vector3.zero, 0.25f).SetUpdate(true);
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0;
-        //transform.DOScale(Vector3.zero, 0.25f).SetUpdate(true);
     }
 
     public void OnConfirmSaveBtnClick()
     {
         Transform btnTrf = transform.Find("GameSettingPart/confirmSave_btn").transform;
-        //btnTrf.DOPunchPosition(new Vector3(5f, 0, 0), 1f, 3, 0.5f).SetUpdate(true);
+        btnTrf.DOPunchPosition(new Vector3(5f, 0, 0), 1f, 3, 0.5f).SetUpdate(true);
         ConfirmToChangeOrReset(false);
     }
 
     public void OnResetBtnClick()
     {
         Transform btnTrf = transform.Find("GameSettingPart/resetDefault_btn").transform;
-        //btnTrf.DOPunchPosition(new Vector3(5f, 0, 0), 1f, 3, 0.5f).SetUpdate(true);
+        btnTrf.DOPunchPosition(new Vector3(5f, 0, 0), 1f, 3, 0.5f).SetUpdate(true);
         ConfirmToChangeOrReset(true);
     }
 
@@ -119,6 +120,6 @@ public class GameSettingPanel : BasePanel
 
     public void OnCancelPromptBtnClick()
     {
-        //confirmPromptGo.transform.DOScale(Vector3.zero, 0.1f).SetUpdate(true);
+        confirmPromptGo.transform.DOScale(Vector3.zero, 0.1f).SetUpdate(true);
     }
 }
