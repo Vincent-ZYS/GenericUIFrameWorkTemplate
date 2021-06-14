@@ -23,6 +23,7 @@ public class BasicUIOperation : MonoBehaviour
         {
             currentPausePanelGo = Instantiate(PausePanelGo, canvasUITf);
             currentPausePanelGo.transform.Find("Resume_Btn").GetComponent<Button>().onClick.AddListener(OnResumeClick);
+            currentPausePanelGo.transform.Find("Setting_Btn").GetComponent<Button>().onClick.AddListener(OnClickSettingPanelClick);
         }
         currentPausePanelGo.SetActive(true);
     }
